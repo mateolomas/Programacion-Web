@@ -1,0 +1,9 @@
+h1 {
+    text-align: center;
+    size: 100;
+    background-color: black;
+    font-family:serif;
+    color: white;
+    color-interpolation-filters: linearRGB;
+    border-radius: 15px;
+}

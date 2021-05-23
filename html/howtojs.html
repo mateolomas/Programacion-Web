@@ -1,0 +1,66 @@
+<html>
+    <head>
+
+        <title >
+            How to JavaScript. Learn Functions, variables, and more! 
+        </title>
+        <h1 style="font-family: sans-serif; padding: auto; color: white; text-align: center;">
+            How to JavaScript. Learn Functions, variables, and more! 
+        </h1>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        
+
+       
+
+    </head>
+
+    <body style="background-image: url(iphone12.jpg); background-repeat:repeat;">
+        <br><br>
+        <table border=3 style="width: auto; color: white;">
+            <script>
+                function getUserName(cad1, cad2) { return cad1.concat(".", cad2).toLowerCase()};
+                var alumnos = [{"nombre": "Mateo","apellido": "Lomas","getUserName": function getUserName() { return this.nombre.concat(".", this.apellido).toLowerCase()}},
+    
+                               {"nombre":"Sebastian","apellido": "Olale","getUserName": function getUserName() { return this.nombre.concat(".", this.apellido).toLowerCase()}}]; 
+                for(alum of alumnos){
+                    document.write("<tr>");
+                    for(att in alum){
+                        if(typeof alum[att] != "function"){
+                            document.write("<td>" + alum[att]);
+                            }
+                        else{
+                            document.write("<td>" + alum[att]());
+                            } 
+                            
+                }
+            }
+                
+    
+            </script>
+        </table>
+
+        <table border="0">
+            <caption style="color: white; font-size: larger; padding: 15px; font-family: sans-serif;">
+                Tablero de Ajedrez
+            </caption>
+            <script>
+                document.write("<br>");
+
+    
+                for(var i=1; i<=8; i++){
+                    document.write("<tr>");
+                    for(var j=1; j<=8; j++){
+                        if((i+j)%2 ==0)
+                            document.write("<td style='background-color:white'>");
+                        else
+                            document.write("<td style='background-color:black'>");}}                           
+    
+            </script>
+            
+
+        </table>
+        
+
+
+    </body>
+</html>
