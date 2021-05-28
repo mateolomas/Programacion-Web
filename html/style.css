@@ -56,12 +56,14 @@ body {
 
 img {
     margin: auto;
+    position: absolute;
+    width: 100;
 }
 
-img:hover {
+/*img:hover {
     transform: scale(1.5);
     transition: 1s;
-}
+}*/
 
 a {
     text-decoration: none;

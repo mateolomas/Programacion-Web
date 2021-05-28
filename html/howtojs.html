@@ -4,19 +4,48 @@
         <title >
             How to JavaScript. Learn Functions, variables, and more! 
         </title>
-        <h1 style="font-family: sans-serif; padding: auto; color: white; text-align: center;">
+        <h1 style="font-family: sans-serif; padding: auto; color: rgb(0, 0, 0); text-align: center;">
             How to JavaScript. Learn Functions, variables, and more! 
         </h1>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script>
+
+        var timer; 
+        function ToRight(){
+                document.getElementById("fig").style = "left:" + (document.getElementById("fig").x + 10);
+                timer = setTimeout(ToRight, 100);
+                if( document.getElementById("fig").x > window.innerWidth){
+                    document.getElementById("fig").style = "left:-20";
+
+                }
+            }
+
+        function StopIt() {
+            document.getElementById("fig").style = "left:0" 
+            clearTimeout(timer);
+        }
+
+        function PauseIt() {
+            
+            clearTimeout(timer);
+
+        }
+
+
+
+
+        </script>
+
+        
         
 
        
 
     </head>
 
-    <body style="background-image: url(iphone12.jpg); background-repeat:repeat;">
+    <body style="background-image: none;">
         <br><br>
-        <table border=3 style="width: auto; color: white;">
+        <table border=1 style="width: auto; color: rgb(20, 18, 18);">
             <script>
                 function getUserName(cad1, cad2) { return cad1.concat(".", cad2).toLowerCase()};
                 var alumnos = [{"nombre": "Mateo","apellido": "Lomas","getUserName": function getUserName() { return this.nombre.concat(".", this.apellido).toLowerCase()}},
@@ -39,8 +68,8 @@
             </script>
         </table>
 
-        <table border="0">
-            <caption style="color: white; font-size: larger; padding: 15px; font-family: sans-serif;">
+        <table border="1">
+            <caption style="color: rgb(1, 81, 209); font-size: larger; padding: 15px; font-family: sans-serif;">
                 Tablero de Ajedrez
             </caption>
             <script>
@@ -59,6 +88,18 @@
             
 
         </table>
+
+        <h2  id="Title2" style="color: black;">
+         Time events! 
+        </h2>
+       
+     
+        <button style="font: 1em sans-serif; border: none; padding: 15px 32px;" onclick="ToRight()" > Start </button>
+        <button style="font: 1em sans-serif; border: none; padding: 15px 32px;" onclick="PauseIt()" > Pause </button>
+        <button style="font: 1em sans-serif; border: none; padding: 15px 32px;" onclick="StopIt()" > Stop </button>
+        <br>
+        <img  id="fig" src = "logo-with-duo.png">
+
         
 
 

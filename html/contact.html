@@ -4,10 +4,38 @@
     <title>
         Contact
     </title>
+    <script>
+        function setImg() {
+            var facu = document.getElementById("cbo").value;
+            if(facu=="TICS")
+                document.getElementById("logo").src = "logo-with-duo.png";
+            if(facu=="MATE")
+                document.getElementById("logo").src = "iphone12.jpg";
+            if(facu=="BIO")       
+                document.getElementById("logo").src = "platzi_favicon.png";
+            if(facu=="GEO")
+                document.getElementById("logo").src = "logo-with-duo.png";
+
+        }
+
+        function check_name() {
+            //alert("Debugging events");
+        
+            if("abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf(event.key) == -1 && event.key != "Backspace" && event.key!="Delete" && event.key!="ArrowLeft" && event.key!="ArrowRight")
+            {
+                event.preventDefault();
+            
+            }
+        }
+
+
+
+
+    </script>
 </head>
-    <body>
+    <body onload="document.getElementById('cbo').value = ' '">
         <h2>Ingrese sus datos para ser contactado</h2>
-        Nombre completo: <input type="text">
+        Nombre completo: <input onkeydown="check_name()" type="text">
         <br>
         Email:          <input type="email">
         <br>
@@ -16,7 +44,7 @@
               <input type="radio" name= "sexo">NO definido
               <br>
 
-        Carrera: <select>
+        Carrera: <select id="cbo" onchange="setImg()">
                 <option>TICS</option>
                 <option>MATE</option>
                 <option>BIO</option>
@@ -24,6 +52,7 @@
 
                 </select> 
                 <br>
+                <img id="logo" width=150> 
         <button>Enviar</button>
         <button>Limpiar Datos</button>
 
