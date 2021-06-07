@@ -1,63 +1,55 @@
-
-
-
 div {
-    margin: auto;
-    width: fit-content;
+  margin: auto;
+  width: fit-content;
 }
 
-
 h2 {
-    color: rgb(254, 254, 254); font: 3em sans-serif ;
-    text-align: center;
+  color: rgb(254, 254, 254);
+  font: 3em sans-serif;
+  text-align: center;
 }
 
 h2:hover {
-    transform: skewX(15deg);
+  transform: skewX(15deg);
 }
-
-body {
-    background-image: url("applelogo1.jpg");
-    background-size:contain;
-}
-
 
 .center {
-    display: block;
-    margin: auto;
+  display: block;
+  margin: auto;
 }
 
-.paragrah{
-    font: 1em sans-serif;
-    background-color: rgba(205, 91, 21, 0.612);
-    border-radius: 10px; 
-    border: solid grey;
-    color: rgb(15, 15, 13); width: fit-content; margin: auto;
-    border-radius: 20px;
-    padding: 15px;
-    margin-bottom: 15px
+.paragrah {
+  font: 1em sans-serif;
+  background-color: rgba(205, 91, 21, 0.612);
+  border-radius: 10px;
+  border: solid grey;
+  color: rgb(15, 15, 13);
+  width: fit-content;
+  margin: auto;
+  border-radius: 20px;
+  padding: 15px;
+  margin-bottom: 15px;
 }
-
 
 #firma {
-    color: rgb(255, 251, 251);
-    font: 1em sans-serif;
-    font-size: 15px;
+  color: rgb(255, 251, 251);
+  font: 1em sans-serif;
+  font-size: 15px;
 }
 
 #firma:hover {
-    font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .paragrah:hover {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: cornsilk;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: cornsilk;
 }
 
 img {
-    margin: auto;
-    position: absolute;
-    width: 100;
+  margin: auto;
+  position: absolute;
+  width: 100;
 }
 
 /*img:hover {
@@ -66,66 +58,64 @@ img {
 }*/
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-a:link, a:visited {
-    color:rgb(15, 15, 13);
+a:link,
+a:visited {
+  color: rgb(15, 15, 13);
 }
-
 
 figure {
-    caption-side: bottom
+  caption-side: bottom;
 }
 
 table {
-    border-radius: 15px;
-    box-shadow: 5px;
-    border-color: rgb(35, 138, 114);
+  border-radius: 15px;
+  box-shadow: 5px;
+  border-color: rgb(35, 138, 114);
 }
 
-
 td {
-    border-color: rgb(35, 138, 114);
-    font: 1em sans-serif;
+  border-color: rgb(35, 138, 114);
+  font: 1em sans-serif;
 
-    text-align: center;
-    padding: 15px;
-
+  text-align: center;
+  padding: 15px;
 }
 
 .Menu {
-    padding-top: 15px;
-    text-align: center;
-    background-color: cornsilk;
-
+  padding-top: 15px;
+  text-align: center;
+  background-color: cornsilk;
 }
 
 th {
-    padding: 8px;
-    font-size: 22;
+  padding: 8px;
+  font-size: 22;
 }
 
-#Duo, #Plz, #Udy {
-    display: none;
-    padding: 15px;
-    text-align: center;
-    font: 1em sans-serif;
+#Duo,
+#Plz,
+#Udy {
+  display: none;
+  padding: 15px;
+  text-align: center;
+  font: 1em sans-serif;
 }
 
 /*td:hover {
     transform: scale(1.5);
 }*/
 
-#Duo:hover, #Plz:hover, #Udy:hover {
-
-    transform:rotate(15deg)
-
+#Duo:hover,
+#Plz:hover,
+#Udy:hover {
+  transform: rotate(15deg);
 }
 
-
-#Duo:target, #Plz:target, #Udy:target {
-    display: block;
+#Duo:target,
+#Plz:target,
+#Udy:target {
+  display: block;
 }
-
-
