@@ -1,0 +1,80 @@
+<html>
+
+<head>
+  <title>Pregunta 1</title>
+</head>
+
+<body>
+  <h1>Pregunta 1</h1>
+  Texto: <input id="texto" type="text" />
+  <br />
+  <br />
+  Fuente:
+  <select id="font_select" onChange="changeFont()">
+    <option>Courier New</option>
+    <option>Arial</option>
+    <option>Calibri Light</option>
+  </select>
+  <br />
+  <br />
+
+  Tamaño:
+  <select id="sizeFont" onchange="changeSize(this);">
+    <option>20</option>
+    <option>25</option>
+    <option>30</option>
+    <option>35</option>
+    <option>40</option>
+    <option>45</option>
+    <option>50</option>
+    <option>55</option>
+    <option>60</option>
+  </select>
+  <br />
+  <br />
+
+  Italica?: <input type="checkbox" id="italica" onClick="italic()" />
+  <br />
+  <br />
+
+  Color: <input type="color" onChange="color()" id="color_id" />
+
+  <p id="texto_format"></p>
+
+  <script>
+    document.getElementById("texto").onkeyup = function () {
+      myFunction();
+    };
+    function myFunction() {
+      var x = document.getElementById("texto").value;
+      document.getElementById("texto_format").innerHTML = x;
+    }
+
+    function changeFont() {
+      var selector = document.getElementById("font_select");
+      var family = selector.options[selector.selectedIndex].value;
+      var text = document.getElementById("texto_format");
+      text.style.fontFamily = family;
+    }
+
+    function changeSize(n) {
+      var texto = document.getElementById("texto_format");
+      texto.style.fontSize = n.value + "px";
+    }
+
+    function italic() {
+      if (document.getElementById("italica").checked == true) {
+        document.getElementById("texto_format").style.fontStyle = "italic";
+      } else {
+        document.getElementById("texto_format").style.fontStyle = "normal";
+      }
+    }
+
+    function color() {
+      document.getElementById("texto_format").style.color =
+        document.getElementById("color_id").value;
+    }
+  </script>
+</body>
+
+</html>

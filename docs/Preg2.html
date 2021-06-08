@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Pregunta 2</title>
+
+    <h1>Pregunta 2</h1>
+    <h2>Datos personales:</h2>
+  </head>
+
+  <body>
+    Nombre: <input id="name" /> Apellido: <input id="lastname" />
+    <br />
+    <br />
+    <h2>Titulos universitarios:</h2>
+    <button onclick="agregarFila()">Añadir</button>
+    <table border="1" id="tabla_u">
+      <tr>
+        <td>Universidad</td>
+        <td>Grado</td>
+        <td>Año Obtenido</td>
+      </tr>
+
+      <tbody id="tbody"></tbody>
+    </table>
+    <br />
+
+    <input type="checkbox" /> Confirmo que la informacion es verdadera
+
+    <script>
+      function agregarFila() {
+        document.getElementById("tabla_u").insertRow(-1).innerHTML =
+          '<td><input></td> <select> <option> Magister </option> <option> Licenciado </option> <option> Doctor </option> </select>         <td><input></td><td></td><td><button onclick="eliminarFila()">Eliminar</button></td>';
+      }
+
+      function eliminarFila() {
+        var table = document.getElementById("tabla_u");
+        var rowCount = table.rows.length;
+        if (rowCount > 1) table.deleteRow(rowCount - 1);
+      }
+    </script>
+  </body>
+</html>
