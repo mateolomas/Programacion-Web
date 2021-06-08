@@ -2,25 +2,25 @@
 <html>
   <head>
     <title>Calculadora</title>
-    <meta charset="UTF-8" >
-    
+    <meta charset="UTF-8" />
+
     <style>
-       h1 {
-        font-family: sans-serif
+      h1 {
+        font-family: sans-serif;
       }
 
       body {
-        background-color:rgba(11, 100, 173, 0.945);
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        background-color: rgba(11, 100, 173, 0.945);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
         margin-left: 15px;
         margin-bottom: 15px;
         color: white;
-
       }
 
       button {
-          font-family: sans-serif;
-          margin-top: 1cm;
+        font-family: sans-serif;
+        margin-top: 1cm;
       }
 
       p {
@@ -29,28 +29,28 @@
       }
 
       input {
-        background-color:rgb(38, 38, 163);;
+        background-color: rgb(38, 38, 163);
         color: white;
-
-
       }
 
-
-      select { margin-top: 1cm; color:white; background-color: rgb(38, 38, 163);} 
-    </style> 
-    
+      select {
+        margin-top: 1cm;
+        color: white;
+        background-color: rgb(38, 38, 163);
+      }
+    </style>
   </head>
 
   <body>
     <h2>Calculadora de operaciones simples</h2>
     Escribe un numero:
-    <input id="n1">
-    <br>
-    <br>
+    <input id="n1" />
+    <br />
+    <br />
 
     Escribe otro numero:
-    <input id="n2">
-    <br>
+    <input id="n2" />
+    <br />
     Elige una operacion:
     <select id="id_sig">
       <option>Suma</option>
@@ -60,32 +60,35 @@
     </select>
     <br />
 
-    <button id = "btnDo">Calculate</button>
-    <button id = "btnClear" >Clear</button>
-    <br>
-    <br>
+    <button id="btnDo">Calculate</button>
+    <button id="btnClear">Clear</button>
+    <br />
+    <br />
     Resultado
     <p id="resultado"></p>
-    
 
     <script>
-            
-            document.getElementById("btnDo").addEventListener('click', () => {
-            var a = document.getElementById("n1").value;
-            var b = document.getElementById("n2").value;
-            var res;
-            var signo = document.querySelector('#id_sig').value;
-            if (signo == "Suma") {res = parseFloat(a) + parseFloat(b);}
-            else if (signo == "Resta") {res = parseFloat(a) -parseFloat(b);}
-            else if (signo == "Division") {res = parseFloat(a)/parseFloat(b);}
-            else if (signo == "Multiplicacion") {res = parseFloat(a) * parseFloat(b);}
-            document.getElementById('resultado').innerHTML = res;})
-            
-
-            document.getElementById("btnClear").addEventListener('click', () => {
-            document.getElementById('n1').value = '';                                
-            document.getElementById('n2').value = '';                                
-            document.getElementById('resultado').innerHTML = '';});
-      </script>
+      document.getElementById("btnDo").addEventListener("click", () => {
+        var a = document.getElementById("n1").value;
+        var b = document.getElementById("n2").value;
+        var res;
+        var signo = document.querySelector("#id_sig").value;
+        if (signo == "Suma") {
+          res = parseFloat(a) + parseFloat(b);
+        } else if (signo == "Resta") {
+          res = parseFloat(a) - parseFloat(b);
+        } else if (signo == "Division") {
+          res = parseFloat(a) / parseFloat(b);
+        } else if (signo == "Multiplicacion") {
+          res = parseFloat(a) * parseFloat(b);
+        }
+        document.getElementById("resultado").innerHTML = res;
+      });
+      document.getElementById("btnClear").addEventListener("click", () => {
+        document.getElementById("n1").value = "";
+        document.getElementById("n2").value = "";
+        document.getElementById("resultado").innerHTML = "";
+      });
+    </script>
   </body>
 </html>
